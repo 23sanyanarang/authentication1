@@ -1,0 +1,37 @@
+{% load socialaccount %}
+{% providers_media_js %}
+
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<title>Forms</title>
+<meta content="noindex, nofollow" name="robots">
+<!-- Include CSS File Here-->
+<link rel="stylesheet" href="{% static 'login/css/form.css'%}" />
+</head>
+<body>
+
+<div id="first">
+<form action="" method="post">
+<h1>Contact Form</h1>
+<h4>Please fill all entries.</h4>
+<span class="spn1">Username:</span>&nbsp;
+<input class="name" name="dname" type="text">
+<div class="dropdown" name="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+<br>
+<span class="spn1">Password:</span>&nbsp;
+<input class="password" name="password" type="text">
+<input class="login" name="login" type="submit" value="login">
+<button class="button" type="button" name="google"><a href="{% provider_login_url "google" %}">Google</a></button>
+</form>
+</div>
+</body>
+</html>
